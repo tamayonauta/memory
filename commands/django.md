@@ -1,9 +1,21 @@
 # Django commands
 
+## Create Django project
+
+```sh
+django-admin startproject <projectname> .
+```
+
 ## Create Django app
 
 ```sh
-python manage.py startapp <nameapp>
+python manage.py startapp <appname>
+```
+
+## Run Django server
+
+```sh
+python manage.py runserver
 ```
 
 ## Show migrations
@@ -18,7 +30,7 @@ python manage.py showmigrations
 python manage.py makemigrations
 ```
 
-## Run migrations
+## Apply migrations
 
 ```sh
 python manage.py migrate
