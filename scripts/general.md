@@ -18,6 +18,18 @@ Example:
 git log --since="yesterday" --author="John Tamayo" --reverse --pretty=format:"- %s" > git-logs.txt
 ```
 
+```sh
+git log --since="last week" --author="John Tamayo" --reverse --pretty=format:"- %s" > git-logs.txt
+```
+
+```sh
+git log --since="march 31 2019" --author="John Tamayo" --reverse --pretty=format:"- %s" > git-logs.txt
+```
+
+```sh
+git log --since="03-31-2019" --author="John Tamayo" --reverse --pretty=format:"- %s" > git-logs.txt
+```
+
 ## Copy content from a file
 
 ### UNIX
