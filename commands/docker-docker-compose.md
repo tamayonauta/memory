@@ -2,122 +2,224 @@
 
 ## Build
 
-### Build services
+- Build services
 
-```sh
-docker-compose build
-```
+  ```sh
+  docker-compose build
+  ```
 
 ## Containers
 
-### Startup services
+- Startup services
 
-```sh
-docker-compose up
-```
+  ```sh
+  docker-compose up
+  ```
 
-### Startup service
+- Startup service
 
-```sh
-docker-compose up <service>
-```
+  ```sh
+  docker-compose up <service>
+  ```
 
-### Run command into service
+- Run command into service
 
-```sh
-docker-compose exec <service> <command>
-```
+  ```sh
+  docker-compose exec <service> <command>
+  ```
 
-### List active containers
+- List active containers
 
-```sh
-docker container ls
-```
+  ```sh
+  docker container ls
+  ```
 
-### List containers
+  or
 
-```sh
-docker container ls -a
-```
+  ```sh
+  docker ps
+  ```
 
-### Stop active services
+- List all containers
 
-```sh
-docker-compose stop
-```
+  ```sh
+  docker container ls -a
+  ```
 
-### Stop active service
+  or
 
-```sh
-docker-compose stop <service>
-```
+  ```sh
+  docker ps -a
+  ```
 
-### Remove active services
+- Stop active container
 
-```sh
-docker-compose down
-```
+  ```sh
+  docker container stop <container_name>
+  ```
 
-### Remove container
+  or
 
-```sh
-docker container rm <container_id>
-```
+  ```sh
+  docker stop <container_name>
+  ```
 
-### Remove container with force
+- Start container
 
-```sh
-docker container rm <container_id> -f
-```
+  ```sh
+  docker container start <container_name>
+  ```
+
+  or
+
+  ```sh
+  docker start <container_name>
+  ```
+
+- Stop active services
+
+  ```sh
+  docker-compose stop
+  ```
+
+- Stop active service
+
+  ```sh
+  docker-compose stop <service>
+  ```
+
+- Remove active services
+
+  ```sh
+  docker-compose down
+  ```
+
+- Remove container
+
+  ```sh
+  docker container rm <container_name>
+  ```
+
+  or
+
+  ```sh
+  docker rm <container_name>
+  ```
+
+- Remove container with force
+
+  ```sh
+  docker container rm <container_name> -f
+  ```
+
+  or
+
+  ```sh
+  docker rm <container_name> -f
+  ```
+
+- Prune containers
+
+  ```sh
+  docker container prune
+  ```
+
+- Prune containers with force
+
+  ```sh
+  docker container prune -f
+  ```
 
 ## Images
 
-### List images
+- List images
 
-```sh
-docker image ls
-```
+  ```sh
+  docker image ls
+  ```
 
-### Remove image
+- Remove image
 
-```sh
-docker image rm <image_id>
-```
+  ```sh
+  docker image rm <image_id>
+  ```
 
-### Prune images
+- Remove image with force
 
-```sh
-docker image prune
-```
+  ```sh
+  docker image rm <image_id> -f
+  ```
 
-### Prune images with force
+- Prune images
 
-```sh
-docker image prune -f
-```
+  ```sh
+  docker image prune
+  ```
+
+- Prune images with force
+
+  ```sh
+  docker image prune -f
+  ```
 
 ## Volumes
 
-### List volumes
+- List volumes
 
-```sh
-docker volume ls
-```
+  ```sh
+  docker volume ls
+  ```
 
-### Remove volume
+- Remove volume
 
-```sh
-docker volume rm <volume_name>
-```
+  ```sh
+  docker volume rm <volume_name>
+  ```
 
-### Prune volumes
+- Prune volumes
 
-```sh
-docker volume prune
-```
+  ```sh
+  docker volume prune
+  ```
 
-### Prune volumes with force
+- Prune volumes with force
 
-```sh
-docker volume prune -f
-```
+  ```sh
+  docker volume prune -f
+  ```
+
+## Networks
+
+- List networks
+
+  ```sh
+  docker network ls
+  ```
+
+## Actions
+
+- Execute command into container
+
+  ```sh
+  docker exec -it <container_name> <command>
+  ```
+
+  Example:
+
+  - Enter the container:
+
+    ```sh
+    docker exec -it <container_name> bash
+    ```
+
+- View container logs
+
+  ```sh
+  docker logs <container_name>
+  ```
+
+- View container logs with real time
+
+  ```sh
+  docker logs <container_name> -f
+  ```
