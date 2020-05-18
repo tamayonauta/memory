@@ -1,73 +1,73 @@
 # Django commands
 
-## Create Django project
+- Create Django project
 
-```sh
-django-admin startproject <projectname> .
-```
+  ```sh
+  django-admin startproject <projectname> .
+  ```
 
-## Create Django app
+- Create Django app
 
-```sh
-python manage.py startapp <appname>
-```
+  ```sh
+  python manage.py startapp <appname>
+  ```
 
-## Run Django server
+- Run Django server
 
-```sh
-python manage.py runserver
-```
+  ```sh
+  python manage.py runserver
+  ```
 
-## Show migrations
+- Show migrations
 
-```sh
-python manage.py showmigrations
-```
+  ```sh
+  python manage.py showmigrations
+  ```
 
-## Create migrations
+- Create migrations
 
-```sh
-python manage.py makemigrations
-```
+  ```sh
+  python manage.py makemigrations
+  ```
 
-## Apply migrations
+- Apply migrations
 
-```sh
-python manage.py migrate
-```
+  ```sh
+  python manage.py migrate
+  ```
 
-## Create superuser for Django admin
+- Create superuser for Django admin
 
-```sh
-python manage.py createsuperuser
-```
+  ```sh
+  python manage.py createsuperuser
+  ```
 
-## Create superuser for Django admin more simple
+- Create superuser for Django admin more simple
 
-```sh
-python manage.py createsuperuser --username <admin_test> --email <admin_test@mail.com>
-```
+  ```sh
+  python manage.py createsuperuser --username <admin_test> --email <admin_test@mail.com>
+  ```
 
-## Run tests
+- Run tests
 
-```sh
-python manage.py test
-```
+  ```sh
+  python manage.py test
+  ```
 
-## Run tests with failfast
+- Run tests with failfast
 
-```sh
-python manage.py test --failfast
-```
+  ```sh
+  python manage.py test --failfast
+  ```
 
-## Go to the Shell
+- Go to the Shell
 
-```sh
-python manage.py shell
-```
+  ```sh
+  python manage.py shell
+  ```
 
-## Go to the Shell plus of [django-extensions package](https://github.com/django-extensions/django-extensions)
+- Go to the Shell plus of [django-extensions package](https://github.com/django-extensions/django-extensions)
 
-```sh
-python manage.py shell_plus
-```
+  ```sh
+  python manage.py shell_plus
+  ```
