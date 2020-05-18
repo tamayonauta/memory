@@ -14,6 +14,18 @@
   python3 -m venv myenv
   ```
 
+- Activate virtual environment
+
+  ```sh
+  source <venv_path>/bin/activate
+  ```
+
+  Example:
+
+  ```sh
+  source myenv/bin/activate
+  ```
+
 - Deactivate virtual environment
 
   ```sh
