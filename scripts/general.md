@@ -1,45 +1,67 @@
 # General scripts
 
-## Delete all migrations of a Django project
+## Delete file or directory
 
-```sh
-find . -path "*/migrations/*.py" -not -name "__init__.py" -delete
-```
+- Delete all migrations of a Django project
 
-## Export git commits
+  ```sh
+  find . -path "*/migrations/*.py" -not -name "__init__.py" -delete
+  ```
 
-```sh
-git log --since="<date>" --author="<email or name>" --reverse --pretty=format:"%h,%an,%ar,%s" > <filename>
-```
+- Delete `__pycache__` files
 
-Example:
+  ```sh
+  find . | grep -E "(__pycache__|\.pyc|\.pyo$)" | xargs rm -rf
+  ```
 
-```sh
-git log --since="yesterday" --author="John Tamayo" --reverse --pretty=format:"- %s" > git-logs.txt
-```
+## Content
 
-```sh
-git log --since="last week" --author="John Tamayo" --reverse --pretty=format:"- %s" > git-logs.txt
-```
+- Clear content file
 
-```sh
-git log --since="march 31 2019" --author="John Tamayo" --reverse --pretty=format:"- %s" > git-logs.txt
-```
+  ```sh
+  echo -n "" > <file_name>
+  ```
 
-```sh
-git log --since="03-31-2019" --author="John Tamayo" --reverse --pretty=format:"- %s" > git-logs.txt
-```
+- Check differences between two files
 
-## Copy content from a file
+  ```sh
+  diff <file_name_1> <file_name_2>
+  ```
 
-### UNIX
+- Copy content into the clipboard from a file
 
-```sh
-pbcopy < <filename>
-```
+  ```sh
+  pbcopy < <file_name>
+  ```
 
-Example:
+  Example:
 
-```sh
-pbcopy < git-logs.txt
-```
+  ```sh
+  pbcopy < git-logs.txt
+  ```
+
+## Git
+
+- Export git commits
+
+  ```sh
+  git log --since="<date>" --author="<email or name>" --reverse --pretty=format:"%h,%an,%ar,%s" > <file_name>
+  ```
+
+  Example:
+
+  ```sh
+  git log --since="yesterday" --author="John Tamayo" --reverse --pretty=format:"- %s" > git-logs.txt
+  ```
+
+  ```sh
+  git log --since="last week" --author="John Tamayo" --reverse --pretty=format:"- %s" > git-logs.txt
+  ```
+
+  ```sh
+  git log --since="march 31 2019" --author="John Tamayo" --reverse --pretty=format:"- %s" > git-logs.txt
+  ```
+
+  ```sh
+  git log --since="03-31-2019" --author="John Tamayo" --reverse --pretty=format:"- %s" > git-logs.txt
+  ```
